@@ -1,6 +1,5 @@
 import React                          from 'react';
 import logo                           from './../assets/img/logo.svg';
-import visuel                         from './../assets/img/test.jpg';
 import { BrowserRouter, Route, Link } from 'react-router-dom'; 
 import Projects                       from './Projects.js'; 
 import About                          from './About.js';
@@ -11,8 +10,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
 
-        
-        <img src={ visuel } className="header__logo" alt="Logo" />
+        <Video />
 
         <div className="header">
           <img src={ logo } className="header__logo" alt="Logo" />
