@@ -1,0 +1,58 @@
+/*
+* Variables
+*/
+$margin: 30px;
+
+/*
+* Bloc
+*/
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: inherit;
+    align-items: center;
+}
+
+/*
+* Elements
+*/
+.nav__item {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: $margin;
+    z-index: 10;
+    padding: 5px 0;
+    position: relative;
+    font-weight: $fontBold;
+    text-decoration: none;
+    color: $navText;
+    font-size: .7rem;
+
+    &:after {
+        content: "";
+        height: 1px;
+        width: 0;
+        background-color: $navText;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transition: all linear .2s;
+    }
+
+    &:hover:after {
+        width: 100%;
+        left: -1px;
+    }
+}
+
+/*
+* Elements
+*/
+.nav__item--last-left {
+    margin-right: calc(#{$margin} + 50px);
+}
+
+.nav__item--first-right {
+    margin-left: calc(#{$margin} + 50px);
+}
